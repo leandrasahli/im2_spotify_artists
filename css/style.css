@@ -36,28 +36,29 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    /* Artist Card */
-    .artist-card {
-        width: 400px;
-        height: 600px;
-        padding: 30px;
-        padding-top: 45px;
-        background-color: #EEEDE8;
-        filter: drop-shadow(12px 10px 6.3px #00000040);
-        img {
-            width: 100%;
-            aspect-ratio: 1/1;
-            overflow: clip;
-            object-fit: cover;
-        }
+}
+
+.card {
+    width: 400px;
+    height: 600px;
+    padding: 30px;
+    padding-top: 45px;
+    background-color: #EEEDE8;
+    filter: drop-shadow(12px 10px 6.3px #00000040);
+    img {
+        width: 100%;
+        aspect-ratio: 1/1;
+        overflow: clip;
+        object-fit: cover;
     }
-    h2 {
-        font: var(--poppins);
-    }
-    h3 {
-        font: var(--cop-toptrack);
-    }
-    p {
-        font: var(--cop-tracks);
-    }
+}
+    
+h2 {
+    font: var(--poppins);
+}
+h3 {
+    font: var(--cop-toptrack);
+}
+p {
+    font: var(--cop-tracks);
 }
