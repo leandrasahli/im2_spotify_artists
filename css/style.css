@@ -9,8 +9,27 @@
 }
 
 body {
-    background-color: pink;
+    background-color: white;
     margin: 50px;
+}
+
+#rock {
+    width: 215px;
+    height: 215px;
+
+    background-image: url("../img/button_rock.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+    padding: 0;
+    cursor: pointer;
+    
+    font: var(--cop-toptrack);
 }
 
 #content {

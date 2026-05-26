@@ -1,20 +1,7 @@
-// Auf Genres in Konsole zugreifen
-async function loadGenres() {
-    const url = 'http://localhost:8000/get-genres.php';
-    try {
-        const response = await fetch(url);
-        return await response.json();
-    } catch (error) {
-        console.error(error);
-        return false;
-    }
-}
-const genreData = await loadGenres();
-console.log(genreData);
-
+/*
 // Auf Artist (Taylor Swift) in Konsole zugreifen
 async function loadArtist() {
-    const url = 'http://localhost:8000/get-artist.php';
+    const url = 'https://im2.ebedemec.myhostpoint.ch/get-artist.php';
     try {
         const response = await fetch(url);
         return await response.json();
@@ -28,7 +15,7 @@ console.log(artistData);
 
 // Auf Artist's Top Tracks (Taylor Swift) in Konsole zugreifen
 async function loadTopTracks() {
-    const url = 'http://localhost:8000/get-artist-top-tracks.php';
+    const url = 'https://im2.ebedemec.myhostpoint.ch/get-artist-top-tracks.php';
     try {
         const response = await fetch(url);
         return await response.json();
@@ -67,3 +54,4 @@ toptracksData.items.slice(0, 3).forEach((track, index) => {
 });
 
 container.appendChild(item);
+*/
