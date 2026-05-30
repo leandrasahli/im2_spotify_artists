@@ -20,6 +20,17 @@ const backgrounds = {
     indie: "url('img/background_indie.svg')",
 }
 
+const backLogo = {
+    rock: "url('img/button_rock.svg')",
+    electronic: "url('img/button_electronic.svg')",
+    pop: "url('img/button_pop.svg')",
+    latin: "url('img/button_latin.svg')",
+    hiphop: "url('img/button_hiphop.svg')",
+    folk: "url('img/button_folk.svg')",
+    country: "url('img/button_country.svg')",
+    indie: "url('img/button_indie.svg')",
+}
+
 async function loadArtistTopSongById(id) {
     const url = `https://www.theaudiodb.com/api/v1/json/123/track-top10-mb.php?s=${id}`;
     try {
@@ -44,8 +55,10 @@ async function loadArtistDetailsById(id) {
 const buttons = document.querySelectorAll('.button');
 const buttons_container = document.getElementById('buttons_container');
 const genreTitle = document.getElementById('genre-title');
+const hero = document.getElementById('hero');
 buttons.forEach(button => {
     button.addEventListener('click', async () => {
+        hero.classList.add('hidden');
         genreTitle.textContent = button.textContent;
         buttons_container.classList.add('hidden');
         const artists = [];
@@ -55,6 +68,11 @@ buttons.forEach(button => {
         document.body.style.backgroundSize = 'cover';
         document.body.style.backgroundPosition = 'center';
         document.body.style.backgroundRepeat = 'no-repeat';
+
+        backButton.style.backgroundImage = backLogo[genre];
+        backButton.style.backgroundSize = 'cover';
+        backButton.style.backgroundPosition = 'center';
+        backButton.style.backgroundRepeat = 'no-repeat';
 
         const ids = genres[genre];
         for (const id of ids) {
@@ -86,7 +104,9 @@ backButton.addEventListener('click', () => {
     container.innerHTML = '';
     buttons_container.classList.remove('hidden');
     genreTitle.textContent = '';
+    hero.classList.remove('hidden');
     document.body.style.backgroundImage = '';
+    backButton.style.backgroundImage = '';
 });
 
 function displayArtists(artists) {
