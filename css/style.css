@@ -24,25 +24,37 @@ h1 {
     text-align: center;
 }
 
+#hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1; /* Damit Text über den Buttons bleibt, falls nötig */
+}
+
 #buttons_container {
     position: absolute;
     top: 50%;
-    left: 42.5%;
+    left: 50%;
     transform: translate(-50%, -50%);
 }
 
 #buttons_container .button {
     position: absolute;
-    top: 50%;
-    left: 50%;
-
     width: 215px;
     height: 215px;
 
-    transform:
-        rotate(calc(var(--i) * 45deg))
-        translate(320px)
-        rotate(calc(var(--i) * -45deg));
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    transform: var(--t);
+    transition: transform 0.3s ease;
+}
+
+#buttons_container .button:hover {
+    transform: var(--t) scale(1.1);
 }
 
 /* Buttons */
@@ -63,11 +75,7 @@ h1 {
     cursor: pointer;
     
     font: var(--cop-toptrack);
-
-    &:hover {
-        transform: rotate(calc(var(--i) * 45deg)) translate(320px) rotate(calc(var(--i) * -45deg)) scale(1.1);
-        transition: 0.3s ease;
-    }
+    --t: translate(-50%, -50%) translate(-130px, -250px);
 }
 
 #electronic {
@@ -87,11 +95,7 @@ h1 {
     cursor: pointer;
     
     font: var(--cop-toptrack);
-
-    &:hover {
-        transform: rotate(calc(var(--i) * 45deg)) translate(320px) rotate(calc(var(--i) * -45deg)) scale(1.1);
-        transition: 0.3s ease;
-    }
+    --t: translate(-50%, -50%) translate(130px, -250px);
 }
 
 #pop {
@@ -111,11 +115,7 @@ h1 {
     cursor: pointer;
     
     font: var(--cop-toptrack);
-
-    &:hover {
-        transform: rotate(calc(var(--i) * 45deg)) translate(320px) rotate(calc(var(--i) * -45deg)) scale(1.1);
-        transition: 0.3s ease;
-    }
+    --t: translate(-50%, -50%) translate(340px, -130px);
 }
 
 #latin {
@@ -135,11 +135,7 @@ h1 {
     cursor: pointer;
     
     font: var(--cop-toptrack);
-
-    &:hover {
-        transform: rotate(calc(var(--i) * 45deg)) translate(320px) rotate(calc(var(--i) * -45deg)) scale(1.1);
-        transition: 0.3s ease;
-    }
+    --t: translate(-50%, -50%) translate(340px, 130px);
 }
 
 #hiphop {
@@ -159,11 +155,7 @@ h1 {
     cursor: pointer;
     
     font: var(--cop-toptrack);
-
-    &:hover {
-        transform: rotate(calc(var(--i) * 45deg)) translate(320px) rotate(calc(var(--i) * -45deg)) scale(1.1);
-        transition: 0.3s ease;
-    }
+    --t: translate(-50%, -50%) translate(130px, 250px);
 }
 
 #folk {
@@ -183,11 +175,7 @@ h1 {
     cursor: pointer;
     
     font: var(--cop-toptrack);
-
-    &:hover {
-        transform: rotate(calc(var(--i) * 45deg)) translate(320px) rotate(calc(var(--i) * -45deg)) scale(1.1);
-        transition: 0.3s ease;
-    }
+    --t: translate(-50%, -50%) translate(-130px, 250px);
 }
 
 #country {
@@ -207,11 +195,7 @@ h1 {
     cursor: pointer;
     
     font: var(--cop-toptrack);
-
-    &:hover {
-        transform: rotate(calc(var(--i) * 45deg)) translate(320px) rotate(calc(var(--i) * -45deg)) scale(1.1);
-        transition: 0.3s ease;
-    }
+    --t: translate(-50%, -50%) translate(-340px, 130px);
 }
 
 #indie {
@@ -231,11 +215,7 @@ h1 {
     cursor: pointer;
     
     font: var(--cop-toptrack);
-
-    &:hover {
-        transform: rotate(calc(var(--i) * 45deg)) translate(320px) rotate(calc(var(--i) * -45deg)) scale(1.1);
-        transition: 0.3s ease;
-    }
+    --t: translate(-50%, -50%) translate(-340px, -130px);
 }
 
 /* Titel Genres */
@@ -291,7 +271,7 @@ h1 {
 
 /* Zurück Button */
 .back-button {
-    position: fixed;
+    position: absolute;
     top: 25px;
     left: 25px;
     font: var(--cop-tracks);
