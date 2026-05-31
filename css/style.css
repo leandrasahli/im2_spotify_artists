@@ -22,6 +22,7 @@ h1 {
 #index-text {
     font: var(--cop-toptrack);
     text-align: center;
+    max-width: 300px;
 }
 
 #hero {
@@ -30,7 +31,7 @@ h1 {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    z-index: 1; /* Damit Text über den Buttons bleibt, falls nötig */
+    z-index: 1;
 }
 
 #buttons_container {
@@ -59,9 +60,6 @@ h1 {
 
 /* Buttons */
 #rock {
-    width: 215px;
-    height: 215px;
-
     background-image: url("../img/button_rock.svg");
     background-size: contain;
     background-position: center;
@@ -79,9 +77,6 @@ h1 {
 }
 
 #electronic {
-    width: 215px;
-    height: 215px;
-
     background-image: url("../img/button_electronic.svg");
     background-size: contain;
     background-position: center;
@@ -99,9 +94,6 @@ h1 {
 }
 
 #pop {
-    width: 215px;
-    height: 215px;
-
     background-image: url("../img/button_pop.svg");
     background-size: contain;
     background-position: center;
@@ -119,9 +111,6 @@ h1 {
 }
 
 #latin {
-    width: 215px;
-    height: 215px;
-
     background-image: url("../img/button_latin.svg");
     background-size: contain;
     background-position: center;
@@ -139,9 +128,6 @@ h1 {
 }
 
 #hiphop {
-    width: 215px;
-    height: 215px;
-
     background-image: url("../img/button_hiphop.svg");
     background-size: contain;
     background-position: center;
@@ -159,9 +145,6 @@ h1 {
 }
 
 #folk {
-    width: 215px;
-    height: 215px;
-
     background-image: url("../img/button_folk.svg");
     background-size: contain;
     background-position: center;
@@ -179,9 +162,6 @@ h1 {
 }
 
 #country {
-    width: 215px;
-    height: 215px;
-
     background-image: url("../img/button_country.svg");
     background-size: contain;
     background-position: center;
@@ -199,9 +179,6 @@ h1 {
 }
 
 #indie {
-    width: 215px;
-    height: 215px;
-
     background-image: url("../img/button_indie.svg");
     background-size: contain;
     background-position: center;
@@ -298,4 +275,189 @@ h1 {
 
 .hidden {
     display: none;
+}
+
+/* Mobile */
+
+@media (max-width: 400px) {
+
+    body {
+        background-image: url(../img/background_index_mobile.svg);
+        background-size: cover;
+    }
+
+    h1 {
+        font: var(--cop-title);
+        text-align: center;
+    }
+
+    #index-text {
+        font: var(--cop-toptrack);
+        text-align: center;
+    }
+
+    #hero {
+        position: absolute;
+        top: 4vh;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+
+    #buttons_container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #buttons_container .button {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+
+        transform: var(--t);
+        transition: transform 0.3s ease;
+    }
+
+    /* Buttons */
+    #rock {
+        background-image: url("../img/button_rock.svg");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        background-color: transparent;
+        border: none;
+        outline: none;
+
+        padding: 0;
+        cursor: pointer;
+        
+        font: var(--cop-toptrack);
+        --t: translate(-50%, -50%) translate(-80px, 50px);
+    }
+
+    #electronic {
+        background-image: url("../img/button_electronic.svg");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        background-color: transparent;
+        border: none;
+        outline: none;
+
+        padding: 0;
+        cursor: pointer;
+        
+        font: var(--cop-toptrack);
+        --t: translate(-50%, -50%) translate(80px, 150px);
+    }
+
+    #pop {
+        background-image: url("../img/button_pop.svg");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        background-color: transparent;
+        border: none;
+        outline: none;
+
+        padding: 0;
+        cursor: pointer;
+        
+        font: var(--cop-toptrack);
+        --t: translate(-50%, -50%) translate(-80px, 250px);
+    }
+
+    #latin {
+        background-image: url("../img/button_latin.svg");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        background-color: transparent;
+        border: none;
+        outline: none;
+
+        padding: 0;
+        cursor: pointer;
+        
+        font: var(--cop-toptrack);
+        --t: translate(-50%, -50%) translate(80px, 350px);
+    }
+
+    #hiphop {
+        background-image: url("../img/button_hiphop.svg");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        background-color: transparent;
+        border: none;
+        outline: none;
+
+        padding: 0;
+        cursor: pointer;
+        
+        font: var(--cop-toptrack);
+        --t: translate(-50%, -50%) translate(-80px, 450px);
+    }
+
+    #folk {
+        background-image: url("../img/button_folk.svg");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        background-color: transparent;
+        border: none;
+        outline: none;
+
+        padding: 0;
+        cursor: pointer;
+        
+        font: var(--cop-toptrack);
+        --t: translate(-50%, -50%) translate(80px, 550px);
+    }
+
+    #country {
+        background-image: url("../img/button_country.svg");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        background-color: transparent;
+        border: none;
+        outline: none;
+
+        padding: 0;
+        cursor: pointer;
+        
+        font: var(--cop-toptrack);
+        --t: translate(-50%, -50%) translate(-80px, 650px);
+    }
+
+    #indie {
+        background-image: url("../img/button_indie.svg");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        background-color: transparent;
+        border: none;
+        outline: none;
+
+        padding: 0;
+        cursor: pointer;
+        
+        font: var(--cop-toptrack);
+        --t: translate(-50%, -50%) translate(80px, 750px);
+    }
 }
