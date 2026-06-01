@@ -59,7 +59,16 @@ const hero = document.getElementById('hero');
 buttons.forEach(button => {
     button.addEventListener('click', async () => {
         hero.classList.add('hidden');
-        genreTitle.textContent = button.textContent;
+        const isMobile = window.matchMedia("(max-width: 400px)").matches;
+        if (button.id === "electronic" && isMobile) {
+            genreTitle.innerHTML = "Elec-<br>tronic";
+        } 
+        else if (button.id === "hiphop" && isMobile) {
+            genreTitle.innerHTML = "Hip-<br>Hop";
+        } 
+        else {
+            genreTitle.textContent = button.textContent;
+        }
         buttons_container.classList.add('hidden');
         const artists = [];
         const genre = button.getAttribute('id');
