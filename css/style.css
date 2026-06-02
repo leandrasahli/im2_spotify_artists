@@ -10,8 +10,31 @@
 }
 
 body {
-    background-image: url(../img/background_index.svg);
-    background-size: cover;
+    background: linear-gradient(
+        120deg,
+        #d9e6c2,
+        #8db7b0,
+        #d9c4e8,
+        #f2c6a0,
+        #b8d8f0,
+        #e8d5a8
+    );
+    background-size: 400% 400%;
+    animation: genreFlow 45s ease infinite;
+}
+
+@keyframes genreFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 h1 {
@@ -275,6 +298,10 @@ h1 {
 .hidden {
     display: none;
 }
+
+
+
+
 
 /* Mobile */
 
