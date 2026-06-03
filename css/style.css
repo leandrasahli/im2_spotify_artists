@@ -21,6 +21,7 @@ body {
     );
     background-size: 400% 400%;
     animation: genreFlow 45s ease infinite;
+    min-height: 100vh;
 }
 
 @keyframes genreFlow {
@@ -298,10 +299,6 @@ h1 {
 .hidden {
     display: none;
 }
-
-
-
-
 
 /* Mobile */
 
