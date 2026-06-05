@@ -6,9 +6,9 @@ Mit dem Wechsel der API haben sich folgende Änderungen am Projekt ergeben: Ursp
 
 Vorgehensweise:
 
-- Für Farbschema und Konzept des Design entschieden
+- Für Farbschema und Konzept das Design entschieden
 - Visuell in Figma dargestellt, für Prototyp auf vereinfachte Animation und nur 5 Artists pro Genre beschränkt
-- mit Spotify API experimentiert, jedoch keinen Erfolg gehabt (darauf werden wir nicht weiter eingehen, da diese Arbeitsschritte keinen Einfluss auf das finale Projekt haben)
+- Mit Spotify API experimentiert, jedoch keinen Erfolg gehabt (darauf werden wir nicht weiter eingehen, da diese Arbeitsschritte keinen Einfluss auf das finale Projekt haben)
 - Webseite basierend auf dem Prototyp von Lea aufgebaut: Styling ersetzt, weitere Elemente ergänzt (Back-Button, dynamischer Hintergrund)
 - ID's aller Artists auf MusicBrainz herausgesucht und eingebunden
 - Mobile mit leichten optischen Anpassungen erstellt
@@ -16,7 +16,11 @@ Vorgehensweise:
 Herausforderungen:
 
 - Mit nur der index.html Seite müssen zusätzliche Überlegungen getroffen werden, wenn praktisch der gesamte im script.js entsteht
+- Im script.js entstehen teilweise extrem viele Zeilen, zu verstehen, in welche Verschachtelung ein neues Element muss, war nicht immer einfach
+- Verstehen, welches Element man im css ansprechen muss, das im js entstand, gelang nicht immer direkt
 
 Learnings:
 
 - Manchmal gibt es einfach keine Lösung (Spotify API) und wir mussten uns von unserer Idee zumindest zu einem Teil verabschieden
+- Wenn etwas auch nach mehrfachen Versuchen einfach nicht funktioniert, den Frust akzeptieren und nach Hilfe fragen
+- Zusammen an einem Code arbeiten war viel einfacher als erwartet, sich absprechen und auf Github Push und Pull hat gut funktioniert

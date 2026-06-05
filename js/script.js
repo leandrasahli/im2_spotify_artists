@@ -41,6 +41,7 @@ async function loadArtistTopSongById(id) {
         return false;
     }
 }
+
 async function loadArtistDetailsById(id) {
     const url = `https://www.theaudiodb.com/api/v1/json/123/artist-mb.php?i=${id}`;
     try {
