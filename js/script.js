@@ -61,12 +61,18 @@ const hero = document.getElementById('hero');
 const container = document.querySelector('#content');
 
 const startSound = new Audio('audio/audio_transition.wav');
-const genreSound = new Audio ('audio/genre.wav')
+const genreSound = new Audio('audio/genre.wav');
 const hoverSound = new Audio('audio/audio_hover.wav');
 
-window.addEventListener('load', () => {
-    startSound.volume = 0.4;
-    startSound.play().catch(() => {});
+let introPlayed = false;
+
+document.addEventListener('click', () => {
+    if (!introPlayed) {
+        startSound.currentTime = 0;
+        startSound.volume = 0.4;
+        startSound.play().catch(() => {});
+        introPlayed = true;
+    }
 });
 
 const backButton = document.createElement('button');
