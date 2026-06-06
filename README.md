@@ -1,4 +1,4 @@
-Unsere Webseite "Aura" filtert Artists nach Genre und hilft dabei, neue Künstlerinnen und Künstler zu entdecken, die zum eigenen Musikgeschmack passen könnten. Je nachdem, welches Genre man gerne hört, kann man auf eine der Genre Bubbles klicken und bekommt Artists angezeigt, die wir mit diesem Genre assoziieren.
+Unsere Webseite "Aura" filtert Artists nach Genre und hilft dabei, neue Künstlerinnen und Künstler zu entdecken, die zum eigenen Musikgeschmack passen könnten. Je nachdem, welches Genre man gerne hört, kann man auf eine der Genre Bubbles klicken und bekommt Artists angezeigt, die zu diesem Genre passen.
 
 Zu jedem Artist werden ein Bild, der Name sowie der bekannteste Song und das dazugehörige Album angezeigt. So kann man schnell neue Musik entdecken und erhält direkt einen ersten Eindruck von den Künstlerinnen und Künstlern.
 
@@ -11,14 +11,14 @@ Aura soll deshalb nicht nur eine Artist Suche sein, sondern eine kreative und ä
 Unsere Erstidee war, dies mit Spotify umzusetzen. Da wir mit der API von Spotify jedoch auf einige Probleme gestossen sind und unsere Inhalte nicht mehr angezeigt werden konnten, mussten wir eine andere Lösung finden. Nun läuft unsere Webseite über die MusicBrainz API.
 
 Mit dem Wechsel der API haben sich folgende Änderungen am Projekt ergeben: Ursprünglich wollten wir die Top 3 Tracks anzeigen, können mit der API von MusicBrainz jedoch nur auf einen Top Track zugreifen. Eigentlich wollten wir pro Genre 25 Artists angeben. Da MusicBrainz vermutlich jedoch nicht das neuste Programm ist, kennt es viele Artists nicht und nur bei wenigen Artists ist ein Top Track vermerkt. Eine Menge Artists sind auf MusicBrainz nicht verifiziert, was wahrscheinlich zusätzlich dazu geführt hat, dass gewisse Artist IDs nicht angenommen wurden.
-Daher mussten wir unsere Auswahl auf 20 Artists pro Genre reduzieren.
+Daher mussten wir unsere Auswahl auf 20 Artists pro Genre reduzieren. Bei Latin auf 17 Artists.
 
 Vorgehensweise:
 
 - Für Farbschema und Konzept das Design entschieden
 - Visuell in Figma dargestellt, für Prototyp auf vereinfachte Animation und nur 5 Artists pro Genre beschränkt
 - Mit Spotify API experimentiert, jedoch keinen Erfolg gehabt (darauf werden wir nicht weiter eingehen, da diese Arbeitsschritte keinen Einfluss auf das finale Projekt haben)
-- Webseite basierend auf dem Prototyp von Lea (Nachnamen?) aufgebaut: Styling ersetzt, weitere Elemente ergänzt (Back-Button, dynamischer Hintergrund)
+- Webseite basierend auf dem Prototyp von Lea Moser aufgebaut: Styling ersetzt, weitere Elemente ergänzt (Back-Button, dynamischer Hintergrund)
 - ID's aller Artists auf MusicBrainz herausgesucht und eingebunden
 - Mobile mit leichten optischen Anpassungen erstellt
 
