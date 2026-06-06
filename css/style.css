@@ -1,3 +1,5 @@
+
+
 @keyframes rockEnter {
     from {
         opacity: 0;
@@ -92,6 +94,7 @@
 }
 
 body {
+    
     background: linear-gradient(
         120deg,
         #d9e6c2,
