@@ -1,3 +1,85 @@
+@keyframes rockEnter {
+    from {
+        opacity: 0;
+        transform: translate(-800px, -500px) scale(0.3);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes electronicEnter {
+    from {
+        opacity: 0;
+        transform: translate(800px, -500px) scale(0.3);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes popEnter {
+    from {
+        opacity: 0;
+        transform: translate(1000px, 0) scale(0.3);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes latinEnter {
+    from {
+        opacity: 0;
+        transform: translate(800px, 500px) scale(0.3);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes hiphopEnter {
+    from {
+        opacity: 0;
+        transform: translate(0, 800px) scale(0.3);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes folkEnter {
+    from {
+        opacity: 0;
+        transform: translate(-800px, 500px) scale(0.3);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes rnbEnter {
+    from {
+        opacity: 0;
+        transform: translate(-1000px, 0) scale(0.3);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes indieEnter {
+    from {
+        opacity: 0;
+        transform: translate(-800px, -500px) scale(0.3);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
 @import "resets.css";
 @import "fonts.css";
 
@@ -56,6 +138,19 @@ h1 {
     transform: translate(-50%, -50%);
     text-align: center;
     z-index: 1;
+    animation: heroIntro 1.2s ease forwards;
+}
+
+@keyframes heroIntro {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -45%) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
 }
 
 #buttons_container {
@@ -63,6 +158,9 @@ h1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition:
+        transform 0.3s ease,
+        filter 0.3s ease;
 }
 
 #buttons_container .button {
@@ -82,6 +180,12 @@ h1 {
     transform: var(--t) scale(1.1);
 }
 
+#buttons_container .button:hover {
+    filter:
+        drop-shadow(0 0 15px rgba(255,255,255,0.7))
+        drop-shadow(0 0 30px rgba(255,255,255,0.5));
+}
+
 /* Buttons */
 #rock {
     background-image: url("../img/button_rock.svg");
@@ -98,6 +202,7 @@ h1 {
     
     font: var(--cop-toptrack);
     --t: translate(-50%, -50%) translate(-130px, -250px);
+    animation: rockEnter 1.2s ease forwards;
 }
 
 #electronic {
@@ -115,6 +220,7 @@ h1 {
     
     font: var(--cop-toptrack);
     --t: translate(-50%, -50%) translate(130px, -250px);
+    animation: electronicEnter 1.2s ease forwards;
 }
 
 #pop {
@@ -132,6 +238,8 @@ h1 {
     
     font: var(--cop-toptrack);
     --t: translate(-50%, -50%) translate(340px, -130px);
+    animation: popEnter 1.2s ease forwards;
+    
 }
 
 #latin {
@@ -149,6 +257,7 @@ h1 {
     
     font: var(--cop-toptrack);
     --t: translate(-50%, -50%) translate(340px, 130px);
+    animation: latinEnter 1.2s ease forwards;
 }
 
 #hiphop {
@@ -166,6 +275,7 @@ h1 {
     
     font: var(--cop-toptrack);
     --t: translate(-50%, -50%) translate(130px, 250px);
+    animation: hiphopEnter 1.2s ease forwards;
 }
 
 #folk {
@@ -183,6 +293,7 @@ h1 {
     
     font: var(--cop-toptrack);
     --t: translate(-50%, -50%) translate(-130px, 250px);
+    animation: folkEnter 1.2s ease forwards;
 }
 
 #rnb {
@@ -200,6 +311,7 @@ h1 {
     
     font: var(--cop-toptrack);
     --t: translate(-50%, -50%) translate(-340px, 130px);
+    animation: rnbEnter 1.2s ease forwards;
 }
 
 #indie {
@@ -217,6 +329,7 @@ h1 {
     
     font: var(--cop-toptrack);
     --t: translate(-50%, -50%) translate(-340px, -130px);
+    animation: indieEnter 1.2s ease forwards;
 }
 
 /* Titel Genres */
@@ -247,12 +360,32 @@ h1 {
     margin-top: 10px;
     margin-bottom: 30px;
     filter: drop-shadow(12px 10px 6.3px rgba(0, 0, 0, 0.25));
-    img {
-        width: 100%;
-        aspect-ratio: 1/1;
-        overflow: clip;
-        object-fit: cover;
+   img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    overflow: clip;
+    object-fit: cover;
+
+    animation: imageReveal 0.8s ease;
+
+    transition:
+        transform 0.3s ease,
+        filter 0.3s ease;
+}
+    
+@keyframes imageReveal {
+    from {
+        opacity: 0;
+        filter: blur(20px);
+        transform: scale(1.05);
     }
+
+    to {
+        opacity: 1;
+        filter: blur(0);
+        transform: scale(1);
+    }
+}
 
     h2 {
         font: var(--poppins);
@@ -264,10 +397,16 @@ h1 {
         font: var(--cop-tracks);
     }
 
-    &:hover {
-        transform: translateY(-10px);
-        transition: 0.3s ease;
-    }
+  &:hover {
+    transform: translateY(-10px);
+
+    filter:
+        drop-shadow(12px 10px 6.3px rgba(0, 0, 0, 0.25))
+        drop-shadow(0 0 25px rgba(255, 220, 180, 0.6))
+        drop-shadow(0 0 40px rgba(180, 220, 255, 0.4));
+
+    transition: 0.3s ease;
+}
 }
 
 /* Zurück Button */
@@ -300,8 +439,102 @@ h1 {
     display: none;
 }
 
-/* Mobile */
+@keyframes heroIntro {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -45%) scale(0.95);
+    }
 
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@keyframes bubbleEnter {
+    0% {
+        opacity: 0;
+        filter: blur(15px);
+    }
+
+    100% {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+@media (max-width: 1200px) {
+
+    :root {
+        --cop-title: 400 60px/120% 'Copperplate';
+        --cop-toptrack: 400 26px/120% 'Copperplate';
+    }
+
+    #buttons_container .button {
+        width: 180px;
+        height: 180px;
+    }
+
+    #index-text {
+        max-width: 260px;
+    }
+
+    #rock { --t: translate(-50%, -50%) translate(-110px, -210px); }
+    #electronic { --t: translate(-50%, -50%) translate(110px, -210px); }
+    #pop { --t: translate(-50%, -50%) translate(280px, -110px); }
+    #latin { --t: translate(-50%, -50%) translate(280px, 110px); }
+    #hiphop { --t: translate(-50%, -50%) translate(110px, 210px); }
+    #folk { --t: translate(-50%, -50%) translate(-110px, 210px); }
+    #rnb { --t: translate(-50%, -50%) translate(-280px, 110px); }
+    #indie { --t: translate(-50%, -50%) translate(-280px, -110px); }
+}
+
+
+
+@media (max-width: 900px) {
+
+    #buttons_container .button {
+        width: 140px;
+        height: 140px;
+    }
+
+    #rock { --t: translate(-50%, -50%) translate(-80px, -170px); }
+    #electronic { --t: translate(-50%, -50%) translate(80px, -170px); }
+    #pop { --t: translate(-50%, -50%) translate(210px, -80px); }
+    #latin { --t: translate(-50%, -50%) translate(210px, 80px); }
+    #hiphop { --t: translate(-50%, -50%) translate(80px, 170px); }
+    #folk { --t: translate(-50%, -50%) translate(-80px, 170px); }
+    #rnb { --t: translate(-50%, -50%) translate(-210px, 80px); }
+    #indie { --t: translate(-50%, -50%) translate(-210px, -80px); }
+
+
+  :root {
+    --cop-title: 400 45px/120% 'Copperplate';
+    --cop-toptrack: 400 22px/120% 'Copperplate';
+}
+
+    #index-text {
+        max-width: 420px;
+    }
+}
+
+
+
+
+/* Mobile */
+@keyframes genreFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
 @media (max-width: 400px) {
 
     :root {
@@ -314,10 +547,19 @@ h1 {
         --cop-button: 400 21px/120% 'Copperplate';
     }
 
-    body {
-        background-image: url(../img/background_index_mobile.svg);
-        background-size: cover;
-    }
+   body {
+    background: linear-gradient(
+        120deg,
+        #d9e6c2,
+        #8db7b0,
+        #d9c4e8,
+        #f2c6a0,
+        #b8d8f0,
+        #e8d5a8
+    );
+    background-size: 400% 400%;
+    animation: genreFlow 45s ease infinite;
+}
 
     h1 {
         font: var(--cop-title);
