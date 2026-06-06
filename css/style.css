@@ -1,5 +1,31 @@
+@import "resets.css";
+@import "fonts.css";
 
+:root {
+    /* Schriften */
+    --poppins: 700 35px/120% 'Poppins';
+    --cop-toptrack: 400 30px/120% 'Copperplate';
+    --cop-tracks: 400 24px/90% 'Copperplate';
+    --cop-title: 400 75px/120% 'Copperplate';
+}
 
+/* Hintergrund */
+body {
+    background: linear-gradient(
+        120deg,
+        #d9e6c2,
+        #8db7b0,
+        #d9c4e8,
+        #f2c6a0,
+        #b8d8f0,
+        #e8d5a8
+    );
+    background-size: 400% 400%;
+    animation: genreFlow 45s ease infinite;
+    min-height: 100vh;
+}
+
+/* Buttons fliegen rein */
 @keyframes rockEnter {
     from {
         opacity: 0;
@@ -80,49 +106,20 @@
     }
 }
 
-
-
-@import "resets.css";
-@import "fonts.css";
-
-:root {
-    /* Schriften */
-    --poppins: 700 35px/120% 'Poppins';
-    --cop-toptrack: 400 30px/120% 'Copperplate';
-    --cop-tracks: 400 24px/90% 'Copperplate';
-    --cop-title: 400 75px/120% 'Copperplate';
-}
-
-body {
-    
-    background: linear-gradient(
-        120deg,
-        #d9e6c2,
-        #8db7b0,
-        #d9c4e8,
-        #f2c6a0,
-        #b8d8f0,
-        #e8d5a8
-    );
-    background-size: 400% 400%;
-    animation: genreFlow 45s ease infinite;
-    min-height: 100vh;
-}
-
+/* Schwebende Buttons */
 @keyframes genreFlow {
     0% {
         background-position: 0% 50%;
     }
-
     50% {
         background-position: 100% 50%;
     }
-
     100% {
         background-position: 0% 50%;
     }
 }
 
+/* Text Startseite */
 h1 {
     font: var(--cop-title);
     text-align: center;
@@ -149,13 +146,13 @@ h1 {
         opacity: 0;
         transform: translate(-50%, -45%) scale(0.9);
     }
-
     to {
         opacity: 1;
         transform: translate(-50%, -50%) scale(1);
     }
 }
 
+/* Buttons */
 #buttons_container {
     position: absolute;
     top: 50%;
@@ -170,17 +167,11 @@ h1 {
     position: absolute;
     width: 215px;
     height: 215px;
-
     background-color: transparent;
     border: none;
     cursor: pointer;
-
     transform: var(--t);
     transition: transform 0.3s ease;
-}
-
-#buttons_container .button:hover {
-    transform: var(--t) scale(1.1);
 }
 
 #buttons_container .button:hover {
@@ -189,21 +180,18 @@ h1 {
         drop-shadow(0 0 30px rgba(255,255,255,0.5));
 }
 
-/* Buttons */
 #rock {
     background-image: url("../img/button_rock.svg");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-
     background-color: transparent;
     border: none;
     outline: none;
-
     padding: 0;
     cursor: pointer;
-    
     font: var(--cop-toptrack);
+    color: black;
     --t: translate(-50%, -50%) translate(-130px, -250px);
     animation: rockEnter 1.2s ease forwards;
 }
@@ -213,15 +201,13 @@ h1 {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-
     background-color: transparent;
     border: none;
     outline: none;
-
     padding: 0;
     cursor: pointer;
-    
     font: var(--cop-toptrack);
+    color: black;
     --t: translate(-50%, -50%) translate(130px, -250px);
     animation: electronicEnter 1.2s ease forwards;
 }
@@ -231,18 +217,15 @@ h1 {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-
     background-color: transparent;
     border: none;
     outline: none;
-
     padding: 0;
     cursor: pointer;
-    
     font: var(--cop-toptrack);
+    color: black;
     --t: translate(-50%, -50%) translate(340px, -130px);
     animation: popEnter 1.2s ease forwards;
-    
 }
 
 #latin {
@@ -250,15 +233,13 @@ h1 {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-
     background-color: transparent;
     border: none;
     outline: none;
-
     padding: 0;
     cursor: pointer;
-    
     font: var(--cop-toptrack);
+    color: black;
     --t: translate(-50%, -50%) translate(340px, 130px);
     animation: latinEnter 1.2s ease forwards;
 }
@@ -268,15 +249,13 @@ h1 {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-
     background-color: transparent;
     border: none;
     outline: none;
-
     padding: 0;
     cursor: pointer;
-    
     font: var(--cop-toptrack);
+    color: black;
     --t: translate(-50%, -50%) translate(130px, 250px);
     animation: hiphopEnter 1.2s ease forwards;
 }
@@ -286,15 +265,13 @@ h1 {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-
     background-color: transparent;
     border: none;
     outline: none;
-
     padding: 0;
     cursor: pointer;
-    
     font: var(--cop-toptrack);
+    color: black;
     --t: translate(-50%, -50%) translate(-130px, 250px);
     animation: folkEnter 1.2s ease forwards;
 }
@@ -304,15 +281,13 @@ h1 {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-
     background-color: transparent;
     border: none;
     outline: none;
-
     padding: 0;
     cursor: pointer;
-    
     font: var(--cop-toptrack);
+    color: black;
     --t: translate(-50%, -50%) translate(-340px, 130px);
     animation: rnbEnter 1.2s ease forwards;
 }
@@ -322,20 +297,18 @@ h1 {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-
     background-color: transparent;
     border: none;
     outline: none;
-
     padding: 0;
     cursor: pointer;
-    
     font: var(--cop-toptrack);
+    color: black;
     --t: translate(-50%, -50%) translate(-340px, -130px);
     animation: indieEnter 1.2s ease forwards;
 }
 
-/* Titel Genres */
+/* Genre Titel */
 #genre-title {
     position: relative;
     top: 25px;
@@ -360,35 +333,33 @@ h1 {
     padding: 30px;
     padding-top: 45px;
     background-color: #EEEDE8;
-    margin-top: 10px;
-    margin-bottom: 30px;
+    margin-top: 60px;
+    margin-bottom: 50px;
     filter: drop-shadow(12px 10px 6.3px rgba(0, 0, 0, 0.25));
-   img {
-    width: 100%;
-    aspect-ratio: 1/1;
-    overflow: clip;
-    object-fit: cover;
 
-    animation: imageReveal 0.8s ease;
-
-    transition:
-        transform 0.3s ease,
-        filter 0.3s ease;
-}
+    img {
+        width: 100%;
+        aspect-ratio: 1/1;
+        overflow: clip;
+        object-fit: cover;
+        animation: imageReveal 0.8s ease;
+        transition:
+            transform 0.3s ease,
+            filter 0.3s ease;
+    }
     
-@keyframes imageReveal {
-    from {
-        opacity: 0;
-        filter: blur(20px);
-        transform: scale(1.05);
+    @keyframes imageReveal {
+        from {
+            opacity: 0;
+            filter: blur(20px);
+            transform: scale(1.05);
+        }
+        to {
+            opacity: 1;
+            filter: blur(0);
+            transform: scale(1);
+        }
     }
-
-    to {
-        opacity: 1;
-        filter: blur(0);
-        transform: scale(1);
-    }
-}
 
     h2 {
         font: var(--poppins);
@@ -400,16 +371,14 @@ h1 {
         font: var(--cop-tracks);
     }
 
-  &:hover {
-    transform: translateY(-10px);
-
-    filter:
-        drop-shadow(12px 10px 6.3px rgba(0, 0, 0, 0.25))
-        drop-shadow(0 0 25px rgba(255, 220, 180, 0.6))
-        drop-shadow(0 0 40px rgba(180, 220, 255, 0.4));
-
-    transition: 0.3s ease;
-}
+    &:hover {
+        transform: translateY(-10px);
+        filter:
+            drop-shadow(12px 10px 6.3px rgba(0, 0, 0, 0.25))
+            drop-shadow(0 0 25px rgba(255, 220, 180, 0.6))
+            drop-shadow(0 0 40px rgba(180, 220, 255, 0.4));
+        transition: 0.3s ease;
+    }
 }
 
 /* Zurück Button */
@@ -420,82 +389,110 @@ h1 {
     font: var(--cop-tracks);
     width: 80px;
     height: 80px;
-
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-
     background-color: transparent;
     border: none;
     outline: none;
-
     padding: 0;
     cursor: pointer;
-    
     &:hover {
         transform: scale(1.1);
         transition: 0.3s ease;
     }
 }
 
+/* Inhalte nur auf ausgewählten Seiten anzeigen */
 .hidden {
     display: none;
 }
 
-@keyframes heroIntro {
-    from {
-        opacity: 0;
-        transform: translate(-50%, -45%) scale(0.95);
-    }
-
-    to {
-        opacity: 1;
-        transform: translate(-50%, -50%) scale(1);
-    }
-}
-
-@keyframes bubbleEnter {
-    0% {
-        opacity: 0;
-        filter: blur(15px);
-    }
-
-    100% {
-        opacity: 1;
-        filter: blur(0);
-    }
-}
-
+/* Breakpoint 1200px*/
 @media (max-width: 1200px) {
 
     :root {
+        /* Schriften */
         --cop-title: 400 60px/120% 'Copperplate';
-        --cop-toptrack: 400 26px/120% 'Copperplate';
+        --cop-index: 400 26px/120% 'Copperplate';
+        --cop-genre: 400 75px/120% 'Copperplate';
+        --cop-button: 400 26px/120% 'Copperplate';
     }
 
+    /* Titel Genres */
+    #genre-title {
+        font: var(--cop-genre);
+    }
+
+    /* Text Startseite */
+    #index-text {
+        max-width: 260px;
+        font: var(--cop-index);
+    }
+
+    /* Buttons */
     #buttons_container .button {
         width: 180px;
         height: 180px;
     }
 
-    #index-text {
-        max-width: 260px;
+    #rock {
+        --t: translate(-50%, -50%) translate(-110px, -210px);
+        font: var(--cop-button);
     }
-
-    #rock { --t: translate(-50%, -50%) translate(-110px, -210px); }
-    #electronic { --t: translate(-50%, -50%) translate(110px, -210px); }
-    #pop { --t: translate(-50%, -50%) translate(280px, -110px); }
-    #latin { --t: translate(-50%, -50%) translate(280px, 110px); }
-    #hiphop { --t: translate(-50%, -50%) translate(110px, 210px); }
-    #folk { --t: translate(-50%, -50%) translate(-110px, 210px); }
-    #rnb { --t: translate(-50%, -50%) translate(-280px, 110px); }
-    #indie { --t: translate(-50%, -50%) translate(-280px, -110px); }
+    #electronic {
+        --t: translate(-50%, -50%) translate(110px, -210px); 
+        font: var(--cop-button);
+    }
+    #pop {
+        --t: translate(-50%, -50%) translate(280px, -110px);
+        font: var(--cop-button);
+    }
+    #latin {
+        --t: translate(-50%, -50%) translate(280px, 110px);
+        font: var(--cop-button);
+    }
+    #hiphop {
+        --t: translate(-50%, -50%) translate(110px, 210px);
+        font: var(--cop-button);
+    }
+    #folk {
+        --t: translate(-50%, -50%) translate(-110px, 210px);
+        font: var(--cop-button);
+    }
+    #rnb {
+        --t: translate(-50%, -50%) translate(-280px, 110px);
+        font: var(--cop-button);
+    }
+    #indie {
+        --t: translate(-50%, -50%) translate(-280px, -110px);
+        font: var(--cop-button);
+    }
 }
 
-
-
+/* Breakpoint 900px*/
 @media (max-width: 900px) {
 
+    :root {
+        /* Schriften */
+        --cop-title: 400 46px/120% 'Copperplate';
+        --cop-index: 400 22px/120% 'Copperplate';
+        --cop-genre: 400 75px/120% 'Copperplate';
+        --cop-button: 400 20px/120% 'Copperplate';
+    }
+
+    /* Titel Genres */
+    #genre-title {
+        font: var(--cop-genre);
+    }
+
+    /* Text Startseite */
+    #index-text {
+        max-width: 210px;
+        font: var(--cop-index);
+    }
+
+    /* Buttons */
     #buttons_container .button {
         width: 140px;
         height: 140px;
@@ -509,35 +506,18 @@ h1 {
     #folk { --t: translate(-50%, -50%) translate(-80px, 170px); }
     #rnb { --t: translate(-50%, -50%) translate(-210px, 80px); }
     #indie { --t: translate(-50%, -50%) translate(-210px, -80px); }
-
-
-  :root {
-    --cop-title: 400 45px/120% 'Copperplate';
-    --cop-toptrack: 400 22px/120% 'Copperplate';
 }
 
-    #index-text {
-        max-width: 420px;
+/* Breakpoint 700px */
+@media (max-width: 700px) {
+
+    :root {
+        /* Schriften */
+        --cop-genre: 400 50px/120% 'Copperplate';
     }
 }
-
-
-
 
 /* Mobile */
-@keyframes genreFlow {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
 @media (max-width: 400px) {
 
     :root {
@@ -551,18 +531,18 @@ h1 {
     }
 
    body {
-    background: linear-gradient(
-        120deg,
-        #d9e6c2,
-        #8db7b0,
-        #d9c4e8,
-        #f2c6a0,
-        #b8d8f0,
-        #e8d5a8
-    );
-    background-size: 400% 400%;
-    animation: genreFlow 45s ease infinite;
-}
+        background: linear-gradient(
+            120deg,
+            #d9e6c2,
+            #8db7b0,
+            #d9c4e8,
+            #f2c6a0,
+            #b8d8f0,
+            #e8d5a8
+        );
+        background-size: 400% 400%;
+        animation: genreFlow 45s ease infinite;
+    }
 
     h1 {
         font: var(--cop-title);
@@ -578,7 +558,7 @@ h1 {
 
     #hero {
         position: absolute;
-        top: 4vh;
+        top: 15vh;
         left: 50%;
         transform: translateX(-50%);
         text-align: center;
@@ -610,14 +590,11 @@ h1 {
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
-
         background-color: transparent;
         border: none;
         outline: none;
-
         padding: 0;
         cursor: pointer;
-        
         font: var(--cop-button);
         color: black;
         --t: translate(-50%, -50%) translate(-80px, -60px);
@@ -628,14 +605,11 @@ h1 {
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
-
         background-color: transparent;
         border: none;
         outline: none;
-
         padding: 0;
         cursor: pointer;
-        
         font: var(--cop-button);
         color: black;
         --t: translate(-50%, -50%) translate(80px, 40px);
@@ -646,14 +620,11 @@ h1 {
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
-
         background-color: transparent;
         border: none;
         outline: none;
-
         padding: 0;
         cursor: pointer;
-        
         font: var(--cop-button);
         color: black;
         --t: translate(-50%, -50%) translate(-80px, 140px);
@@ -664,14 +635,11 @@ h1 {
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
-
         background-color: transparent;
         border: none;
         outline: none;
-
         padding: 0;
         cursor: pointer;
-        
         font: var(--cop-button);
         color: black;
         --t: translate(-50%, -50%) translate(80px, 240px);
@@ -682,14 +650,11 @@ h1 {
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
-
         background-color: transparent;
         border: none;
         outline: none;
-
         padding: 0;
         cursor: pointer;
-        
         font: var(--cop-button);
         color: black;
         --t: translate(-50%, -50%) translate(-80px, 340px);
@@ -700,14 +665,11 @@ h1 {
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
-
         background-color: transparent;
         border: none;
         outline: none;
-
         padding: 0;
         cursor: pointer;
-        
         font: var(--cop-button);
         color: black;
         --t: translate(-50%, -50%) translate(80px, 440px);
@@ -718,14 +680,11 @@ h1 {
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
-
         background-color: transparent;
         border: none;
         outline: none;
-
         padding: 0;
         cursor: pointer;
-        
         font: var(--cop-button);
         color: black;
         --t: translate(-50%, -50%) translate(-80px, 540px);
@@ -736,14 +695,11 @@ h1 {
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
-
         background-color: transparent;
         border: none;
         outline: none;
-
         padding: 0;
         cursor: pointer;
-        
         font: var(--cop-button);
         color: black;
         --t: translate(-50%, -50%) translate(80px, 640px);
@@ -755,6 +711,19 @@ h1 {
         height: 200px;
         width: 1px;
         bottom: -40px;
+    }
+
+    /* Schwebende Buttons */
+    @keyframes genreFlow {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
     }
 
     /* Titel Genres */
@@ -783,8 +752,9 @@ h1 {
         padding-top: 35px;
         background-color: #EEEDE8;
         margin-top: 10px;
-        margin-bottom: 100px;
+        margin-bottom: 150px;
         filter: drop-shadow(12px 10px 6.3px rgba(0, 0, 0, 0.25));
+
         img {
             width: 100%;
             aspect-ratio: 1/1;
@@ -817,18 +787,14 @@ h1 {
         color: black;
         width: 65px;
         height: 65px;
-
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
-
         background-color: transparent;
         border: none;
         outline: none;
-
         padding: 0;
         cursor: pointer;
-        
         &:hover {
             transform: scale(1.1);
             transition: 0.3s ease;
