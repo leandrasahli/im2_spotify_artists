@@ -387,6 +387,7 @@ h1 {
     top: 25px;
     left: 25px;
     font: var(--cop-tracks);
+    color: black;
     width: 80px;
     height: 80px;
     background-size: contain;
